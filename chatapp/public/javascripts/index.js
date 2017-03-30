@@ -8,6 +8,7 @@ function enter() {
     // ユーザ名をチェックする
     if (userName.length < 1) {
         alert('ユーザー名を入力してください。');
+        return;
     }
 
     $('form').submit();

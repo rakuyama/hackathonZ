@@ -1,10 +1,12 @@
+
+<!-- room.hbs -->
 <div class="container">
     <div class="row">
         <h1>Node Chat チャットルーム</h1>
         <form method="post" action="/">
             <div class="room-login_user">
-                ログインユーザ：さん
-                <input id="userName" type="hidden" value="">
+                ログインユーザ：{{userName}}さん
+                <input id="userName" type="hidden" value="{{userName}}">
             </div>
             <div class="room-message">
                 <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
@@ -28,3 +30,4 @@
 <script src="/javascripts/publish.js"></script>
 <script src="/javascripts/memo.js"></script>
 <script src="/javascripts/exit.js"></script>
+<!-- room.hbs -->

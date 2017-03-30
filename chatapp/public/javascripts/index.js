@@ -2,9 +2,13 @@
 
 // チャットルームに入室する
 function enter() {
-    const userName = '';
-    // ユーザ名をチェックする
+    // get param
+    const userName = $('#userName').val();
 
+    // ユーザ名をチェックする
+    if (userName.length < 1) {
+        alert('ユーザー名を入力してください。');
+    }
 
     $('form').submit();
 }

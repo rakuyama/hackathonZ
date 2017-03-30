@@ -12,6 +12,8 @@ function publish() {
 
     socket.emit('eve_pub',dct);
 
+    $('#message').val('');
+
     return false;
 }
 

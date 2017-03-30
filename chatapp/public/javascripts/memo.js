@@ -3,7 +3,9 @@
 // メモを画面上に表示する
 function memo() {
   const userName = $('#userName').val();
-  const message = $('#message').val();
+  var message = $('#message').val();
+
+  message = $.trim( message );
 
   if (message.length < 1) {
       alert('なにかにゅうりょくしてください！！！');

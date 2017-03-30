@@ -14,7 +14,9 @@ function exit() {
 
 // サーバから受信した退室メッセージを画面上に表示する
 socket.on('eve_exi', function (data) {
-    var msg = '';
+    console.log(data);
+
+    let msg = '';
     msg += '[' + ts2dt(data.timestamp) + '] '
     msg += data.userName;
     msg += 'さんが退室しました。';

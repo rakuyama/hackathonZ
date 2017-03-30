@@ -3,7 +3,7 @@
 // 投稿メッセージをサーバに送信する
 function publish() {
     const userName = $('#userName').val();
-    var message = $('#message').val();
+    let message = $('#message').val();
 
     message = $.trim( message );
 
@@ -12,7 +12,7 @@ function publish() {
         return;
     }
 
-    var data = {
+    const data = {
        userName:userName
       ,message:message
     };
@@ -24,9 +24,12 @@ function publish() {
     return false;
 }
 
+
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('eve_pub', function (data) {
-    var msg = '';
+    console.log(data);
+
+    let msg = '';
     msg += '[' + ts2dt(data.timestamp) + '] '
     msg += data.userName;
     msg += 'さん: ';

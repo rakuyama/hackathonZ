@@ -19,6 +19,5 @@ module.exports = function (socket, io) {
       console.log('eve_pub: ' + data.timestamp);
 
       io.sockets.emit('eve_pub', data);
-
     });
 };

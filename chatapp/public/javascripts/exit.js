@@ -5,7 +5,7 @@ function exit() {
     const data = {
         userName: $('#userName').val()
     };
-    socket.emit('eve_exi',data);
+    socket.emit('eve_exi', data);
 
     // 退室
     location.href = '/';

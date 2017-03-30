@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function (server) {
-
     const socketIo = require('socket.io');
     const io = socketIo.listen(server);
 
@@ -13,6 +12,6 @@ module.exports = function (server) {
         require('./enter')(socket);
 
         // 退室モジュールの呼出
-        require('./exit')(socket);
+        require('./exit')(socket, io);
     });
 };

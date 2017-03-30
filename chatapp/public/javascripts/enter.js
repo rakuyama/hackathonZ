@@ -1,7 +1,9 @@
 'use strict';
 
 // 入室メッセージをサーバに送信する
-socket.emit('eve_ent', { userName: $('#userName').val() });
+socket.emit('eve_ent', {
+    userName: $('#userName').val()
+});
 
 
 // サーバから受信した入室メッセージを画面上に表示する

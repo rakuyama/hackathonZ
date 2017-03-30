@@ -3,17 +3,20 @@
 module.exports = function (socket) {
     // 入室メッセージをクライアントに送信する
     socket.on('eve_ent', function (data) {
-      if (!data){
-        return;
-      }
-      if (!data.userName) {
-          return;
-      }
-      data.timestamp = parseInt((new Date) / 1000);
+        console.log(data);
 
-      console.log('eve_ent: ' + data.userName);
-      console.log('eve_ent: ' + data.timestamp);
+        // check
+        if (!data){
+            return;
+        }
+        if (!data.userName) {
+            return;
+        }
 
-      socket.broadcast.emit('eve_ent', data);
+        // set
+        data.timestamp = parseInt((new Date) / 1000);
+
+        // end
+        socket.broadcast.emit('eve_ent', data);
     });
 };

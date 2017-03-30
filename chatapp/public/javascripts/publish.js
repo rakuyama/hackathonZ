@@ -2,25 +2,28 @@
 
 // 投稿メッセージをサーバに送信する
 function publish() {
+    // get
     const userName = $('#userName').val();
     let message = $('#message').val();
-
     message = $.trim( message );
 
+    // check
     if (message.length < 1) {
         alert('なにかにゅうりょくしてください！！！');
         return;
     }
 
+    // send
     const data = {
-       userName:userName
-      ,message:message
+         userName:userName
+        ,message:message
     };
+    socket.emit('eve_pub', data);
 
-    socket.emit('eve_pub',data);
-
+    // clear
     $('#message').val('');
 
+    // end
     return false;
 }
 

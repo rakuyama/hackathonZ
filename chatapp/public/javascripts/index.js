@@ -3,7 +3,7 @@
 // チャットルームに入室する
 function enter() {
     // get param
-    const userName = $('#userName').val();
+    const userName = $.trim( $('#userName').val() );
 
     // ユーザ名をチェックする
     if (userName.length < 1) {

@@ -1,6 +1,6 @@
 // 要素の値を取得する
 function getValue() {
-    const val = '';
+    const val = $('#text1').val();
     return val;
 }
 
@@ -8,13 +8,13 @@ function getValue() {
 function popupValue() {
     const val = getValue();
     // ここに条件分岐を記入する
-
-        alert(val);
-
+    if (val !== '') {
+      alert(val);
+    }
 }
 
 // 要素に値をセットする
 function setValue() {
     const val = 'Rakus!';
-
+    $('#text2').text(val);
 }

@@ -22,7 +22,7 @@ function memo() {
   msg += '[' + ts2dt(data.timestamp) + '] '
   msg += data.userName;
   msg += 'さん: ';
-  msg += data.message;
+  msg += data.message.split("\n").join('<br>');
   $('#thread').prepend('<p>' + msg + '</p>');
 
   $('#message').val('');

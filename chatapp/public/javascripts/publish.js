@@ -30,6 +30,6 @@ socket.on('eve_pub', function (data) {
     msg += '[' + ts2dt(data.timestamp) + '] '
     msg += data.userName;
     msg += 'さん: ';
-    msg += data.message;
+    msg += data.message.split("\n").join('<br>');
     $('#thread').prepend('<p>' + msg + '</p>');
 });

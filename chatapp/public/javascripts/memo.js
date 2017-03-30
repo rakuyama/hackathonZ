@@ -13,11 +13,13 @@ function memo() {
   }
 
   const data = {
-     userName:userName
-    ,message:message
+     userName: userName
+    ,message: message
+    ,timestamp: parseInt((new Date) / 1000)
   };
 
   var msg = '';
+  msg += '[' + ts2dt(data.timestamp) + '] '
   msg += data.userName;
   msg += 'さん: ';
   msg += data.message;

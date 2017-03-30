@@ -24,7 +24,18 @@
         </form>
     </div>
 </div>
-
+<script>
+function ts2dt (unixtime) {
+	const d = new Date( unixtime * 1000 );
+	const year  = d.getFullYear();
+	const month = d.getMonth() + 1;
+	const day   = d.getDate();
+	const hour  = ( d.getHours()   < 10 ) ? '0' + d.getHours()   : d.getHours();
+	const min   = ( d.getMinutes() < 10 ) ? '0' + d.getMinutes() : d.getMinutes();
+	const sec   = ( d.getSeconds() < 10 ) ? '0' + d.getSeconds() : d.getSeconds();
+	return year + '-' + month + '-' + day + ' ' + hour + ':' + min + ':' + sec;
+}
+</script>
 <script src="/javascripts/socket.js"></script>
 <script src="/javascripts/enter.js"></script>
 <script src="/javascripts/publish.js"></script>

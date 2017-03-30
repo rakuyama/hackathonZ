@@ -27,6 +27,7 @@ function publish() {
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('eve_pub', function (data) {
     var msg = '';
+    msg += '[' + ts2dt(data.timestamp) + '] '
     msg += data.userName;
     msg += 'さん: ';
     msg += data.message;

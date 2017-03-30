@@ -12,9 +12,11 @@ module.exports = function (socket, io) {
       if (!data.message) {
           return;
       }
+      data.timestamp = parseInt((new Date) / 1000);
 
       console.log('eve_pub: ' + data.userName);
       console.log('eve_pub: ' + data.message);
+      console.log('eve_pub: ' + data.timestamp);
 
       io.sockets.emit('eve_pub', data);
 
